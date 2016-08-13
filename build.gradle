@@ -1,0 +1,20 @@
+group 'org.java.spring'
+version '1.0-SNAPSHOT'
+
+subprojects {
+    apply plugin: 'java'
+    apply plugin: 'eclipse'
+    apply plugin: 'idea'
+
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        compile 'org.springframework:spring-context:4.2.2.RELEASE'
+        compile 'org.springframework:spring-jdbc:4.2.2.RELEASE'
+
+        testCompile 'org.springframework:spring-test:4.2.2.RELEASE'
+        testCompile 'junit:junit:4.11'
+    }
+}
