@@ -1,6 +1,7 @@
 package org.java.entities;
 
-import javax.activation.DataSource;
+
+import javax.sql.DataSource;
 
 /**
  * Created by mgupta on 8/13/16.
@@ -15,6 +16,9 @@ public class BaseballGame implements Game {
     public BaseballGame(Team homeTeam, Team awayTeam) {
         setHomeTeam(homeTeam);
         setAwayTeam(awayTeam);
+    }
+
+    public BaseballGame() {
     }
 
     public void setDataSource(DataSource dataSource) {
@@ -38,6 +42,12 @@ public class BaseballGame implements Game {
     }
 
     public String playGame() {
-        return Math.random() < 0.5 ? getHomeTeam().getTeamName() : getAwayTeam().getTeamName();
+        String winner = Math.random() < 0.5 ? getHomeTeam().getTeamName() : getAwayTeam().getTeamName();
+        return String.format("Winner is : %s", winner);
+    }
+
+    @Override
+    public String toString() {
+        return String.format("Baseball Game between %s and %s being played at %s", awayTeam.getTeamName(), homeTeam.getTeamName(), homeTeam.getStadium());
     }
 }

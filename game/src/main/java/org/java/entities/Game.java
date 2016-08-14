@@ -6,9 +6,11 @@ package org.java.entities;
 public interface Game {
 
     void setHomeTeam(Team homeTeam);
+
     void setAwayTeam(Team awayTeam);
 
     Team getHomeTeam();
+
     Team getAwayTeam();
 
     String playGame();

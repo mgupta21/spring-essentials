@@ -6,12 +6,14 @@ import org.springframework.stereotype.Component;
  * Created by mgupta on 8/13/16.
  */
 @Component
-public class WhiteSox implements Team {
+public class Royals implements Team {
+    @Override
     public String getTeamName() {
-        return "White Sox";
+        return "Kansas City Royals";
     }
 
+    @Override
     public String getStadium() {
-        return "U.S. Cellular Field";
+        return "Kauffman";
     }
 }

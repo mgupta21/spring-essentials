@@ -6,6 +6,7 @@ package org.java.entities;
 public interface Team {
 
     String getTeamName();
+
     String getStadium();
 
 }
